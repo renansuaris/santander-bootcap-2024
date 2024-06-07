@@ -21,7 +21,7 @@ public class Player {
     @Column(nullable = false)
     private String position;
 
-    @OneToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
     private Club club;
 
     public String getName() {

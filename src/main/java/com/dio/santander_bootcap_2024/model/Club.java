@@ -11,13 +11,17 @@ public class Club {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(unique = true, nullable = false)
     private String clubName;
+
     @Column(unique = true, nullable = false)
     private String clubStadium;
-    @OneToMany(cascade = CascadeType.REMOVE)
+
+    @OneToMany(mappedBy = "club", cascade = CascadeType.REMOVE)
     private List<Player> players;
-    @OneToOne(cascade = CascadeType.REMOVE)
+
+    @ManyToOne
     private League league;
 
 

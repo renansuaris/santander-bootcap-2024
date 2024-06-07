@@ -11,11 +11,14 @@ public class League {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(unique = true, nullable = false)
     private String leagueName;
+
     @Column(nullable = false)
     private String leagueCountry;
-    @OneToMany(cascade = CascadeType.REMOVE)
+
+    @OneToMany(mappedBy = "league")
     private List<Club> teams;
 
     public Long getId() {
