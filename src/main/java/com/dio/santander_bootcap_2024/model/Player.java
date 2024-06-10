@@ -1,5 +1,7 @@
 package com.dio.santander_bootcap_2024.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity(name = "tb_player")
@@ -12,7 +14,7 @@ public class Player {
     private String name;
     @Column(nullable = false)
     private int age;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private int shirtNumber;
     @Column(nullable = false)
     private String height;
@@ -21,8 +23,12 @@ public class Player {
     @Column(nullable = false)
     private String position;
 
-    @ManyToOne(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Club club;
+
+    public Long getId(){
+        return id;
+    }
 
     public String getName() {
         return name;

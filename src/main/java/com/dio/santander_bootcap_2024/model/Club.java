@@ -1,5 +1,7 @@
 package com.dio.santander_bootcap_2024.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ public class Club {
     @Column(unique = true, nullable = false)
     private String clubStadium;
 
-    @OneToMany(mappedBy = "club", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL)
     private List<Player> players;
 
     @ManyToOne
