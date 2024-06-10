@@ -20,10 +20,10 @@ public class Club {
     @Column(unique = true, nullable = false)
     private String clubStadium;
 
-    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Player> players;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private League league;
 
 

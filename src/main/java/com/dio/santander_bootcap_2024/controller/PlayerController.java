@@ -31,7 +31,7 @@ public class PlayerController {
     }
 
     @PostMapping
-    public ResponseEntity<Player> create(Player playerToCreate){
+    public ResponseEntity<Player> create(@RequestBody Player playerToCreate){
         Player playerCreated = playerService.create(playerToCreate);
         return ResponseEntity.ok(playerCreated);
     }
