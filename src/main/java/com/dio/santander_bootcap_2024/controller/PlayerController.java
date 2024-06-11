@@ -42,4 +42,10 @@ public class PlayerController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{playerId}/assign-club/{clubId}")
+    public ResponseEntity<Void> assignClubToPlayer(@PathVariable Long playerId, @PathVariable Long clubId) {
+        playerService.assignClubToPlayer(playerId, clubId);
+        return ResponseEntity.noContent().build();
+    }
+
 }

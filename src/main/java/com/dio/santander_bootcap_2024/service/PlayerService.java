@@ -13,4 +13,6 @@ public interface PlayerService {
     List<Player> findAllPlayers();
 
     void deleteById(Long id);
+
+    void assignClubToPlayer(Long p_id, Long club_id);
 }
