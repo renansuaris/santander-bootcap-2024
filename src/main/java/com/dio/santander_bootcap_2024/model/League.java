@@ -20,6 +20,7 @@ public class League {
     private String leagueCountry;
 
     @OneToMany(mappedBy = "league", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Club> teams;
 
     public Long getId() {

@@ -26,6 +26,7 @@ public class Club {
     private List<Player> players;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonBackReference
     private League league;
 
 
