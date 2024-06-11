@@ -18,7 +18,7 @@ public class League {
     @Column(nullable = false)
     private String leagueCountry;
 
-    @OneToMany(mappedBy = "league", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "league", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Club> teams;
 
     public Long getId() {
