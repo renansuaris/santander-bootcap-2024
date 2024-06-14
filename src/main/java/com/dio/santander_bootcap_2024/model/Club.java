@@ -69,4 +69,5 @@ public class Club {
     public void setLeague(League league) {
         this.league = league;
     }
+
 }
