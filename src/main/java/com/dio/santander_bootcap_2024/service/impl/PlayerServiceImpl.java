@@ -1,7 +1,7 @@
 package com.dio.santander_bootcap_2024.service.impl;
 
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.clubexceptions.ClubNotFoundException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.playerexceptions.PlayerNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.clubexceptions.ClubNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.playerexceptions.PlayerNotFoundException;
 import com.dio.santander_bootcap_2024.model.Club;
 import com.dio.santander_bootcap_2024.model.Player;
 import com.dio.santander_bootcap_2024.repository.ClubRepository;

@@ -1,11 +1,11 @@
-package com.dio.santander_bootcap_2024.controller.exception;
+package com.dio.santander_bootcap_2024.exceptions;
 
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.clubexceptions.ClubAlreadyExistsException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.clubexceptions.ClubNotFoundException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.leagueexceptions.LeagueAlreadyExistsException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.leagueexceptions.LeagueNotFoundException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.playerexceptions.PlayerAlreadyExistsException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.playerexceptions.PlayerNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.clubexceptions.ClubAlreadyExistsException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.clubexceptions.ClubNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.leagueexceptions.LeagueAlreadyExistsException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.leagueexceptions.LeagueNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.playerexceptions.PlayerAlreadyExistsException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.playerexceptions.PlayerNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

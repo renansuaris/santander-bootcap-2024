@@ -1,4 +1,4 @@
-package com.dio.santander_bootcap_2024.controller.exception.customexceptions.playerexceptions;
+package com.dio.santander_bootcap_2024.exceptions.customexceptions.playerexceptions;
 
 public class PlayerNotFoundException extends RuntimeException {
 

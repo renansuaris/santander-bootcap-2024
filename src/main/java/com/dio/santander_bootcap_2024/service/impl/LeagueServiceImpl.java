@@ -1,7 +1,7 @@
 package com.dio.santander_bootcap_2024.service.impl;
 
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.leagueexceptions.LeagueAlreadyExistsException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.leagueexceptions.LeagueNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.leagueexceptions.LeagueAlreadyExistsException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.leagueexceptions.LeagueNotFoundException;
 import com.dio.santander_bootcap_2024.model.League;
 import com.dio.santander_bootcap_2024.repository.LeagueRepository;
 import com.dio.santander_bootcap_2024.service.LeagueService;

@@ -1,8 +1,8 @@
 package com.dio.santander_bootcap_2024.service.impl;
 
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.clubexceptions.ClubAlreadyExistsException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.clubexceptions.ClubNotFoundException;
-import com.dio.santander_bootcap_2024.controller.exception.customexceptions.leagueexceptions.LeagueNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.clubexceptions.ClubAlreadyExistsException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.clubexceptions.ClubNotFoundException;
+import com.dio.santander_bootcap_2024.exceptions.customexceptions.leagueexceptions.LeagueNotFoundException;
 import com.dio.santander_bootcap_2024.model.Club;
 import com.dio.santander_bootcap_2024.model.League;
 import com.dio.santander_bootcap_2024.repository.ClubRepository;
@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class ClubServiceImpl implements ClubService {
