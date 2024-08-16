@@ -3,7 +3,6 @@ package com.dio.santander_bootcap_2024.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "tb_league")

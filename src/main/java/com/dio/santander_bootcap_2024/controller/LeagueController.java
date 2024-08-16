@@ -23,18 +23,21 @@ public class LeagueController {
         this.leagueService = leagueService;
     }
 
+    // Tests Done
     @Operation(summary = "Find league by specified ID")
     @GetMapping("/{id}")
-    public ResponseEntity<League> findById(@PathVariable int id) {
+    public ResponseEntity<League> findById(@PathVariable Long id) {
         return ResponseEntity.ok(leagueService.findLeagueById(id)); // Status: 200 OK
     }
 
+    // Tests Done
     @Operation(summary = "Get all leagues")
     @GetMapping
     public ResponseEntity<List<League>> findAll(){
         return ResponseEntity.ok(leagueService.findAllLeagues()); // Status: 200 OK
     }
 
+    // Tests in Progress
     @Operation(summary = "Create a league")
     @PostMapping
     public ResponseEntity<League> createLeague(@RequestBody League league) {

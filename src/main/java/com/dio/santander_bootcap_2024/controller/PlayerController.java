@@ -21,6 +21,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
+    // Tests Done
     @Operation(summary = "Get player by specified ID")
     @GetMapping("/{id}")
     public ResponseEntity<Player> findById(@PathVariable Long id) {
@@ -28,6 +29,7 @@ public class PlayerController {
         return ResponseEntity.ok(player); // Status: 200 OK
     }
 
+    // Tests Done
     @Operation(summary = "Get all players")
     @GetMapping
     public ResponseEntity<List<Player>> findAll() {
@@ -35,6 +37,7 @@ public class PlayerController {
         return ResponseEntity.ok(playersList); // Status: 200 OK
     }
 
+    // Tests Done
     @Operation(summary = "Create a player")
     @PostMapping
     public ResponseEntity<Player> create(@RequestBody Player playerToCreate){
@@ -42,6 +45,7 @@ public class PlayerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(playerCreated); // Status: 201 CREATED
     }
 
+    // Tests in Progress
     @Operation(summary = "Delete a player by specified ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteById(@PathVariable Long id) {

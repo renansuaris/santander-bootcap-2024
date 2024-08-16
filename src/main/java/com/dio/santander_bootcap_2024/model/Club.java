@@ -1,11 +1,9 @@
 package com.dio.santander_bootcap_2024.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "tb_club")
@@ -28,7 +26,6 @@ public class Club {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonBackReference
     private League league;
-
 
     public Long getId() {
         return id;

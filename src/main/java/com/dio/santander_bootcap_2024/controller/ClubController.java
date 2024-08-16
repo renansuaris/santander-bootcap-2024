@@ -23,6 +23,7 @@ public class ClubController {
         this.clubService = clubService;
     }
 
+    // Tests done
     @Operation(summary = "Get club by specified ID")
     @GetMapping("/{id}")
     public ResponseEntity<Club> getClubById(@PathVariable Long id){
@@ -30,12 +31,14 @@ public class ClubController {
         return ResponseEntity.ok(club); // Status: 200 OK
     }
 
+    // Tests done
     @Operation(summary = "Get all clubs")
     @GetMapping
     public ResponseEntity<List<Club>> getAllClubs(){
         return ResponseEntity.ok(clubService.findAllClubs()); // Status: 200 OK
     }
 
+    // Tests Done
     @Operation(summary = "Create a club")
     @PostMapping
     public ResponseEntity<Club> createClub(@RequestBody Club club){
@@ -43,6 +46,7 @@ public class ClubController {
         return ResponseEntity.status(HttpStatus.CREATED).body(clubCreated); // Status: 201 Created
     }
 
+    // Tests Done
     @Operation(summary = "Delete club by specified ID")
     @DeleteMapping
     public ResponseEntity<Void> deleteClubById(Long id){
@@ -50,11 +54,12 @@ public class ClubController {
         return ResponseEntity.noContent().build(); // Status: 204 No Content
     }
 
+    // Tests in Progress
     @Operation(summary = "Assign a league to a club")
     @PutMapping("/{club_id}/assign-league/{league_id}")
     public ResponseEntity<Void> assignLeagueToClub(@PathVariable Long club_id, @PathVariable Long league_id){
         clubService.assignLeagueToClub(club_id, league_id);
-        return ResponseEntity.noContent().build(); // Status: 204 No Content
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build(); // Status: 204 No Content
     }
 
 }

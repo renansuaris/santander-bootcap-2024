@@ -186,6 +186,7 @@ class PlayerServiceImplTest {
             // Act & Assert
             assertThrows(ClubNotFoundException.class, () -> playerService.assignClubToPlayer(playerId, clubId));
         }
+        
 
     }
 

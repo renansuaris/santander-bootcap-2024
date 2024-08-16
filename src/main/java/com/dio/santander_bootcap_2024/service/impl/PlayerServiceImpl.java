@@ -24,13 +24,16 @@ public class PlayerServiceImpl implements PlayerService {
         this.clubRepository = clubRepository;
     }
 
+    // Tests Done
     /** If the player id is present in the repo, it will return it, and if he has a club
      it will return the player along with his club */
     @Override
     public Player findById(Long id) throws PlayerNotFoundException {
-        return playerRepository.findById(id).orElseThrow( () -> new PlayerNotFoundException(id));
+        return playerRepository.findById(id)
+                .orElseThrow( () -> new PlayerNotFoundException(id));
     }
 
+    // Tests Done
     /** If the player already exists in the Player Repo, throws exception
      if not, it will save it in the repo */
     @Override
@@ -38,11 +41,13 @@ public class PlayerServiceImpl implements PlayerService {
         return playerRepository.save(player);
     }
 
+    // Tests Done
     @Override
     public List<Player> findAllPlayers() {
         return playerRepository.findAll();
     }
 
+    // Tests Done
     @Override
     public void deleteById(Long id) throws PlayerNotFoundException {
         if(playerRepository.existsById(id)) {
@@ -53,6 +58,7 @@ public class PlayerServiceImpl implements PlayerService {
         }
     }
 
+    // Tests Done
     @Override
     public void assignClubToPlayer(Long player_id, Long club_id) throws PlayerNotFoundException, ClubNotFoundException {
         Player player = playerRepository.findById(player_id).orElseThrow( () -> new PlayerNotFoundException(player_id) );

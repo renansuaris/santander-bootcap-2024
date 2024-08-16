@@ -25,11 +25,13 @@ public class ClubServiceImpl implements ClubService {
         this.leagueRepository = leagueRepository;
     }
 
+    // Tests Done
     @Override
     public Club findClubById(Long id) throws ClubNotFoundException {
         return clubRepository.findById(id).orElseThrow(() -> new ClubNotFoundException(id));
     }
 
+    // Tests Done
     @Override
     public Club createClub(Club clubToCreate) throws ClubAlreadyExistsException {
         if (clubToCreate.getId() != null && clubRepository.existsById(clubToCreate.getId())) {
@@ -38,11 +40,13 @@ public class ClubServiceImpl implements ClubService {
          return clubRepository.save(clubToCreate);
     }
 
+    // Tests Done
     @Override
     public List<Club> findAllClubs() {
         return clubRepository.findAll();
     }
 
+    // Tests Done
     @Override
     public void deleteClubById(Long id) throws ClubNotFoundException{
         if(clubRepository.existsById(id)) {
@@ -52,6 +56,7 @@ public class ClubServiceImpl implements ClubService {
             throw new ClubNotFoundException(id);
     }
 
+    // Tests Done
     @Override
     public void assignLeagueToClub(Long club_id, Long league_id) throws ClubNotFoundException, LeagueNotFoundException {
 
